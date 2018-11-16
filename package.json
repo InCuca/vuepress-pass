@@ -1,0 +1,25 @@
+{
+  "name": "vuepress-pass",
+  "version": "0.1.0",
+  "description": "VuePress simple password plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InCuca/vuepress-pass.git"
+  },
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "password",
+    "auth"
+  ],
+  "author": "Walker at incuca.com.br",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InCuca/vuepress-pass/issues"
+  },
+  "homepage": "https://github.com/InCuca/vuepress-pass#readme"
+}
