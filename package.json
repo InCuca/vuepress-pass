@@ -1,7 +1,7 @@
 {
   "name": "vuepress-pass",
   "version": "0.1.0",
-  "description": "VuePress simple password plugin",
+  "description": "VuePress authentication plugin",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -14,7 +14,8 @@
     "vuepress",
     "plugin",
     "password",
-    "auth"
+    "auth",
+    "gitlab"
   ],
   "author": "Walker at incuca.com.br",
   "license": "MIT",
@@ -23,6 +24,19 @@
   },
   "homepage": "https://github.com/InCuca/vuepress-pass#readme",
   "devDependencies": {
+    "@vuepress/core": "^1.0.0-alpha.0",
+    "@vuepress/shared-utils": "^1.0.0-alpha.0",
+    "@vuepress/theme-default": "^1.0.0-alpha.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.0",
     "jest": "^23.6.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      ".temp"
+    ]
   }
 }
