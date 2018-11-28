@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/InCuca/vuepress-pass#readme",
   "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0"
   }
 }
