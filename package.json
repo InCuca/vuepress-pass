@@ -1,7 +1,7 @@
 {
   "name": "vuepress-pass",
   "version": "0.1.0",
-  "description": "VuePress simple password plugin",
+  "description": "VuePress authentication plugin",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -14,7 +14,8 @@
     "vuepress",
     "plugin",
     "password",
-    "auth"
+    "auth",
+    "gitlab"
   ],
   "author": "Walker at incuca.com.br",
   "license": "MIT",
