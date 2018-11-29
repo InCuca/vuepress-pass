@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/InCuca/vuepress-pass#readme",
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.26",
     "@vuepress/core": "^1.0.0-alpha.0",
     "@vuepress/shared-utils": "^1.0.0-alpha.0",
     "@vuepress/theme-default": "^1.0.0-alpha.0",
@@ -31,7 +32,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^22.1.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "vue-router": "^3.0.2"
   },
   "jest": {
     "testPathIgnorePatterns": [
@@ -40,5 +42,8 @@
       "/__tests__/fixtures/",
       ".temp"
     ]
+  },
+  "dependencies": {
+    "urijs": "^1.19.1"
   }
 }
