@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const preparator = require('./utils/preparator');
 const getEnhancers = require('./utils/get-enhancers');
 
@@ -17,9 +18,11 @@ describe('Pass', () => {
     const docs = await doPrepare();
     docs.forEach(({ context }) => {
       const enhancer = getEnhancers(context);
+      const enhancerSrc = path.resolve(__dirname, '../lib/enhancer.js');
+      expect(() => fs.readFileSync(enhancerSrc)).not.toThrow();
       expect(enhancer).toMatchObject({ items: expect.any(Array) });
       expect(enhancer.items).toContainEqual(
-        expect.objectContaining({ value: path.resolve(__dirname, '../lib/enhancer.js') }),
+        expect.objectContaining({ value: enhancerSrc }),
       );
     });
   });
