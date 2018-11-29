@@ -1,26 +1,26 @@
-
 const path = require('path');
-const { fs } = require('@vuepress/shared-utils');
-const prepare = require('@vuepress/core/lib/prepare');
+const preparator = require('./utils/preparator');
+const getEnhancers = require('./utils/get-enhancers');
 
 const docsBaseDir = path.resolve(__dirname, 'fixtures');
-const docsModeNames = fs.readdirSync(docsBaseDir);
-const docsModes = docsModeNames.map((name) => {
-  const docsPath = path.resolve(docsBaseDir, name);
-  const docsTempPath = path.resolve(docsPath, '.vuepress/.temp');
-  return { name, docsPath, docsTempPath };
-});
-
+const doPrepare = preparator(docsBaseDir);
 
 describe('Pass', () => {
   it('should not throw error', async () => {
-    await Promise.all(docsModes.map(async ({ docsPath, docsTempPath }) => {
-      await fs.ensureDir(docsTempPath);
-      const context = await prepare(docsPath, {
-        theme: '@vuepress/theme-default',
-        temp: docsTempPath,
-      });
+    const docs = await doPrepare(docsBaseDir);
+    docs.forEach(({ context, docsPath }) => {
       expect(context.sourceDir).toBe(docsPath);
-    }));
+    });
+  });
+
+  it('should add enhancer', async () => {
+    const docs = await doPrepare();
+    docs.forEach(({ context }) => {
+      const enhancer = getEnhancers(context);
+      expect(enhancer).toMatchObject({ items: expect.any(Array) });
+      expect(enhancer.items).toContainEqual(
+        expect.objectContaining({ value: path.resolve(__dirname, '../lib/enhancer.js') }),
+      );
+    });
   });
 });

@@ -36,6 +36,8 @@
   "jest": {
     "testPathIgnorePatterns": [
       "/node_modules/",
+      "/__tests__/utils/",
+      "/__tests__/fixtures/",
       ".temp"
     ]
   }
