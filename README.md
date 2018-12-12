@@ -6,4 +6,14 @@
 
 ## Usage
 
-`npm i --save-dev InCuca/vuepress-pass`
+`npm i --save InCuca/vuepress-pass`
+
+.vuepress/config.js:
+
+```js
+module.exports = {
+  plugins: [ 'vuepress-pass' ]
+}
+```
+
+[more details](https://vuepress.vuejs.org/plugin/using-a-plugin.html#using-a-plugin)
