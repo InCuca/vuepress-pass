@@ -28,14 +28,14 @@ describe('Pass', () => {
     });
   });
 
-  it('should add vuepress-pass-options.js module', async () => {
+  it('should add vuepress-pass.js module', async () => {
     const docs = await doPrepare();
     docs.forEach(({ context }) => {
       const modules = getModuleFn(context).appliedItems;
       expect(modules).toContainEqual(
         expect.objectContaining({
           value: {
-            name: 'vuepress-pass-options.js',
+            name: 'vuepress-pass.js',
             content: expect.stringMatching(/^export const OPTIONS = /),
           },
         }),
