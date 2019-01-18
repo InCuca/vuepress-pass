@@ -11,7 +11,7 @@
 .vuepress/config.js:
 
 ```js
-const Pass = require('../../../../index');
+const Pass = require('vuepress-pass');
 
 module.exports = {
   plugins: [
