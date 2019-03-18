@@ -15,13 +15,14 @@ const Pass = require('vuepress-pass');
 
 module.exports = {
   plugins: [
-  [Pass, {
-    url: 'https://foo.bar/oauth',
-    redirectUri: 'https://foo.bar/callback',
-    clientId: 'foobar',
-    authenticated(redirectQuery) {}, // optional
-    unauthenticated(authQuery, redirect) { redirect(authQuery); }, // optional
-   }],
+        [Pass, {
+            url: 'https://foo.bar/oauth',
+            redirectUri: 'https://foo.bar/callback',
+            clientId: 'foobar',
+            authenticated(redirectQuery) { }, // optional
+            unauthenticated(authQuery, redirect) { redirect(authQuery); }, // optional
+        }],
+    ]
 };
 ```
 
