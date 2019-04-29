@@ -26,7 +26,8 @@
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.29",
     "@vuepress/core": "^1.0.0-alpha.47",
-    "@vuepress/shared-utils": "^1.0.0-alpha.0",
+    "@vuepress/shared-utils": "^1.0.0-alpha.47",
+    "@vuepress/theme-default": "^1.0.0-alpha.47",
     "conventional-changelog-cli": "^2.0.11",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",

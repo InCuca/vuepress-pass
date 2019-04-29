@@ -1,6 +1,6 @@
 const path = require('path');
 const { fs } = require('@vuepress/shared-utils');
-const prepare = require('@vuepress/core/lib/prepare');
+const { createApp } = require('@vuepress/core');
 
 module.exports = docsBaseDir => () => {
   const docsModeNames = fs.readdirSync(docsBaseDir);
@@ -13,10 +13,12 @@ module.exports = docsBaseDir => () => {
 
   return Promise.all(docsModes.map(async ({ docsPath, docsTempPath }) => {
     await fs.ensureDir(docsTempPath);
-    const context = await prepare(docsPath, {
+    const context = createApp({
+      sourceDir: docsPath,
       theme: '@vuepress/theme-default',
       temp: docsTempPath,
     });
+    await context.process();
     return { context, docsPath };
   }));
 };

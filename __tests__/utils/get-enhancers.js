@@ -1,1 +1,3 @@
-module.exports = context => context.pluginAPI.options.enhanceAppFiles;
+module.exports = context => context
+  .pluginAPI
+  .getOption('enhanceAppFiles');
