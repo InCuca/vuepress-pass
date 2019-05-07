@@ -19,8 +19,10 @@ module.exports = {
             url: 'https://foo.bar/oauth',
             redirectUri: 'https://foo.bar/callback',
             clientId: 'foobar',
-            authenticated(redirectQuery) { }, // optional
+            authenticated(redirectQuery, redirect) { redirect('/'); }, // optional
             unauthenticated(authQuery, redirect) { redirect(authQuery); }, // optional
+            setState(state) { localStorage.setItem('auth', state); }, // optional
+            getState() { return localStorage.getItem('auth'); }, // optional
         }],
     ]
 };
