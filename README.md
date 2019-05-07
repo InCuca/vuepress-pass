@@ -21,6 +21,8 @@ module.exports = {
             clientId: 'foobar',
             authenticated(redirectQuery, redirect) { redirect('/'); }, // optional
             unauthenticated(authQuery, redirect) { redirect(authQuery); }, // optional
+            setState(state) { localStorage.setItem('auth', state); }, // optional
+            getState() { return localStorage.getItem('auth'); }, // optional
         }],
     ]
 };
