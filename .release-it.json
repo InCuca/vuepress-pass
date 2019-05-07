@@ -2,7 +2,7 @@
   "pkgFiles": [
     "package.json"
   ],
-  "src": {
+  "git": {
     "tagName": "v%s",
     "tagAnnotation": "Release v%s",
     "commitMessage": "Release v%s"
@@ -11,9 +11,10 @@
     "release": true,
     "releaseName": "Release v%s"
   },
-  "buildCommand": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
-  "increment": "conventional:angular",
-  "beforeChangelogCommand": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
-  "changelogCommand": "npx conventional-changelog -p angular -u | tail -n +3",
-  "safeBump": false
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  }
 }
