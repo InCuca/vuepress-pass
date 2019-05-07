@@ -35,7 +35,7 @@ describe('Pass', () => {
       expect(modules).toContainEqual(
         expect.objectContaining({
           value: {
-            name: 'vuepress-pass.js',
+            name: 'vuepress-pass',
             content: expect.stringMatching(/^export const OPTIONS = /),
           },
         }),
