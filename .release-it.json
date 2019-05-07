@@ -1,7 +1,4 @@
 {
-  "pkgFiles": [
-    "package.json"
-  ],
   "git": {
     "tagName": "v%s",
     "tagAnnotation": "Release v%s",
