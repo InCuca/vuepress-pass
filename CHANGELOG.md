@@ -1,3 +1,5 @@
+## [1.1.1](https://github.com/InCuca/vuepress-pass/compare/v1.1.0...v1.1.1) (2019-05-07)
+
 # 1.0.0 (2018-12-17)
 
 
