@@ -2,7 +2,9 @@
 
 [![Travis](https://img.shields.io/travis/InCuca/vuepress-pass/master.svg)](https://travis-ci.org/InCuca/vuepress-pass/branches)
 
-> VuePress oauth2 plugin
+> VuePress oAuth2 - Implicity Grant plugin
+
+Another options (behind a proxy server): [Pomerium](https://www.pomerium.io), [Okta](https://scotch.io/tutorials/add-authentication-and-personalization-to-vuepress)
 
 ## Usage
 
