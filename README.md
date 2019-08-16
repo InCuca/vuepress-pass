@@ -4,7 +4,7 @@
 
 > VuePress oAuth2 - Implicity Grant plugin
 
-Another options (behind a proxy server): [Pomerium](https://www.pomerium.io), [Okta](https://scotch.io/tutorials/add-authentication-and-personalization-to-vuepress)
+Another options (behind a proxy server): [Pomerium](https://www.pomerium.io), [Okta](https://scotch.io/tutorials/add-authentication-and-personalization-to-vuepress), [vuepress-pomerium](https://github.com/InCuca/vuepress-pomerium)
 
 ## Usage
 
